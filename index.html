@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>My Interactive Timeline</title>
+    <title>Timeline of Jim Crow Laws</title>
     <!-- This line loads the public Plotly library from the internet -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
@@ -18,8 +18,8 @@
 
     <script>
         // This is your specific chart data and the command to draw it.
-        var data = [{"x": ["1912-04-10", "1912-04-11", "1912-04-12", "1912-04-13", "1912-04-14", "1912-04-14", "1912-04-15"], "y": ["Departure", "First Day at Sea", "Second Day at Sea", "Third Day at Sea", "Iceberg Warnings", "Collision", "Sinking"], "mode": "markers", "marker": {"size": 15}, "text": ["The Titanic departs from Southampton, England, on its maiden voyage.", "The ship sails through the English Channel and into the Atlantic.", "The weather is calm and the voyage is uneventful.", "The ship receives multiple warnings of icebergs in the area from other ships.", "The ship continues at high speed despite the warnings.", "At 11:40 PM, the Titanic strikes an iceberg on its starboard side.", "At 2:20 AM, the Titanic breaks apart and sinks, resulting in the loss of over 1,500 lives."], "type": "scatter"}];
-        var layout = {"title": "Timeline of the Titanic's Maiden Voyage", "xaxis": {"title": "Date"}, "yaxis": {"title": "Event"}, "height": 600, "showlegend": false};
+        var data = [{"x": ["1877-01-01", "1896-01-01", "1909-01-01", "1915-01-01", "1948-01-01", "1954-01-01", "1955-01-01", "1964-01-01", "1965-01-01", "1968-01-01"], "y": ["The End of Reconstruction", "Plessy v. Ferguson", "NAACP Founded", "Second KKK", "Integration of the Military", "Brown v. Board of Education", "Rosa Parks", "Civil Rights Act", "Voting Rights Act", "Fair Housing Act"], "mode": "markers", "marker": {"size": 15}, "text": ["The Compromise of 1877 leads to the withdrawal of federal troops from the South, effectively ending Reconstruction and allowing for the rise of Jim Crow laws.", "The U.S. Supreme Court ruling establishes the 'separate but equal' doctrine, legalizing segregation.", "The National Association for the Advancement of Colored People (NAACP) is founded to fight for civil rights.", "The Ku Klux Klan is revived and becomes a powerful force of intimidation and violence against African Americans.", "President Harry S. Truman issues an executive order to desegregate the armed forces.", "The Supreme Court declares state-sponsored segregation in public schools to be unconstitutional.", "Rosa Parks' refusal to give up her bus seat in Montgomery, Alabama, sparks the Montgomery Bus Boycott, a major event in the Civil Rights Movement.", "The Civil Rights Act of 1964 is signed into law, outlawing discrimination based on race, color, religion, sex, or national origin.", "The Voting Rights Act of 1965 is passed, prohibiting racial discrimination in voting.", "The Fair Housing Act is signed into law, prohibiting discrimination in the sale, rental, and financing of housing."], "type": "scatter"}];
+        var layout = {"title": "Timeline of Jim Crow Laws and the Civil Rights Movement", "xaxis": {"title": "Date"}, "yaxis": {"title": "Event"}, "height": 700, "showlegend": false};
         
         var gd = document.getElementById("plotly-div");
         Plotly.newPlot(gd, data, layout, {});
