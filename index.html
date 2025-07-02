@@ -7,7 +7,7 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
         /* This makes the chart fill the entire browser window */
-        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; }
         #plotly-div { height: 100%; width: 100%; }
     </style>
 </head>
@@ -19,7 +19,9 @@
     <script>
         // This is your specific chart data and the command to draw it.
         var data = [{"x": ["1877-01-01", "1896-01-01", "1909-01-01", "1915-01-01", "1948-01-01", "1954-01-01", "1955-01-01", "1964-01-01", "1965-01-01", "1968-01-01"], "y": ["The End of Reconstruction", "Plessy v. Ferguson", "NAACP Founded", "Second KKK", "Integration of the Military", "Brown v. Board of Education", "Rosa Parks", "Civil Rights Act", "Voting Rights Act", "Fair Housing Act"], "mode": "markers", "marker": {"size": 15}, "text": ["The Compromise of 1877 leads to the withdrawal of federal troops from the South, effectively ending Reconstruction and allowing for the rise of Jim Crow laws.", "The U.S. Supreme Court ruling establishes the 'separate but equal' doctrine, legalizing segregation.", "The National Association for the Advancement of Colored People (NAACP) is founded to fight for civil rights.", "The Ku Klux Klan is revived and becomes a powerful force of intimidation and violence against African Americans.", "President Harry S. Truman issues an executive order to desegregate the armed forces.", "The Supreme Court declares state-sponsored segregation in public schools to be unconstitutional.", "Rosa Parks' refusal to give up her bus seat in Montgomery, Alabama, sparks the Montgomery Bus Boycott, a major event in the Civil Rights Movement.", "The Civil Rights Act of 1964 is signed into law, outlawing discrimination based on race, color, religion, sex, or national origin.", "The Voting Rights Act of 1965 is passed, prohibiting racial discrimination in voting.", "The Fair Housing Act is signed into law, prohibiting discrimination in the sale, rental, and financing of housing."], "type": "scatter"}];
-        var layout = {"title": "Timeline of Jim Crow Laws and the Civil Rights Movement", "xaxis": {"title": "Date"}, "yaxis": {"title": "Event"}, "height": 700, "showlegend": false};
+        
+        // THIS IS THE COMPLETE, ORIGINAL LAYOUT WITH ALL YOUR STYLING
+        var layout = {"title": "Timeline of Jim Crow Laws and the Civil Rights Movement", "xaxis": {"title": "Date"}, "yaxis": {"title": "Event"}, "height": 700, "showlegend": false, "template": {"data": {"scatter": [{"type": "scatter"}]}, "layout": {"colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "hovermode": "closest", "paper_bgcolor": "white", "plot_bgcolor": "white", "title": {"x": 0.05}, "xaxis": {"gridcolor": "lightgrey", "linecolor": "lightgrey", "ticks": "outside", "zerolinecolor": "lightgrey"}, "yaxis": {"gridcolor": "lightgrey", "linecolor": "lightgrey", "ticks": "outside", "zerolinecolor": "lightgrey"}}}};
         
         var gd = document.getElementById("plotly-div");
         Plotly.newPlot(gd, data, layout, {});
